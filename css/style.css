@@ -1,68 +1,117 @@
 ```css
-/* General reset */
+/* 1. Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 2. Page */
 body {
     font-family: Arial, sans-serif;
     background: #141414;
-    color: #ffffff;
+    color: white;
+    min-height: 100vh;
     padding: 25px;
 }
 
-/* Page heading */
-h1 {
-    font-size: 24px;
-    margin-bottom: 15px;
+/* 3. Header */
+header {
+    text-align: center;
+    margin: 20px 0 30px;
 }
 
-h2 {
+header h1 {
+    color: #e50914;
+    font-size: 36px;
     margin-bottom: 10px;
 }
 
-/* Movies grid */
+header p {
+    color: #ccc;
+    font-size: 16px;
+}
+
+/* 4. Search bar */
+.search-container {
+    display: flex;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+#searchInput {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    outline: none;
+    background: #252525;
+    color: white;
+    font-size: 16px;
+}
+
+#searchInput:focus {
+    border-color: #e50914;
+}
+
+#searchInput::placeholder {
+    color: #aaa;
+}
+
+/* 5. Search button */
+#searchBtn {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 6px;
+    background: #e50914;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#searchBtn:hover {
+    background: #b20710;
+}
+
+/* 6. Show grid */
 #movie {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
     gap: 25px;
     max-width: 1400px;
-    margin: 25px auto;
+    margin: 0 auto;
 }
 
-/* Individual show card */
-.movies {
-    background: #222222;
-    border-radius: 12px;
+/* 7. Individual show card */
+.movie {
+    background: #222;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Hover effect */
-.movies:hover {
-    transform: translateY(-8px);
+.movie:hover {
+    transform: translateY(-6px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
 }
 
-/* Show poster */
-.movies img {
+/* 8. Show poster */
+.movie img {
+    display: block;
     width: 100%;
     height: 320px;
     object-fit: cover;
-    display: block;
-    background: #333333;
+    background: #333;
 }
 
-/* Show title */
-.movies h1 {
-    font-size: 20px;
-    margin: 15px 12px 10px;
-    color: #ffcc00;
-}
-
-/* Show information */
-.movies p {
-    font-size: 14
+/* 9. Show title */
+.movie h2 {
+    color: #ffcc}
