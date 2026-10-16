@@ -1,0 +1,68 @@
+```css
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #141414;
+    color: #ffffff;
+    padding: 25px;
+}
+
+/* Page heading */
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Movies grid */
+#movie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+    margin: 25px auto;
+}
+
+/* Individual show card */
+.movies {
+    background: #222222;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.movies:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Show poster */
+.movies img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    background: #333333;
+}
+
+/* Show title */
+.movies h1 {
+    font-size: 20px;
+    margin: 15px 12px 10px;
+    color: #ffcc00;
+}
+
+/* Show information */
+.movies p {
+    font-size: 14
